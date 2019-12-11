@@ -1,0 +1,20 @@
+﻿@model Calculator_Salar_WebApp.Models.CalculatorSalariuBrut
+
+@{
+    ViewData["Title"] = "Calculator salariu brut";
+}
+
+<div class="container">
+
+    <h1 style="color:darkgoldenrod; text-align:center"><b>Calculator salariu brut</b></h1>
+    <p style="color:darkgrey; text-align:center">Calculator salariu aplica reglementarile anului fiscal 2019/2020, ultima actualizare fiind pe 7 ianuarie 2019.</p>
+    <br />
+    <form style="color:darkgoldenrod; text-align:center" class="form-inline" action="/action_page.php">
+        <div class="form-group">
+            <input asp-for="SalarBrut" class="form-control" placeholder="Introduceti salariul net" />
+            <span asp-validation-for="SalarBrut" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-warning">Calculeaza</button>
+    </form>
+</div>
+

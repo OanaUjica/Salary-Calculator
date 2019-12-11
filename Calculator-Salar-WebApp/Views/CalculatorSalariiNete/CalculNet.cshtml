@@ -1,0 +1,59 @@
+﻿@model Calculator_Salar_WebApp.Models.CalculatorSalariuNet
+
+@{
+    ViewData["Title"] = "Calcul Salariu Net";
+}
+
+<h1 style="color:darkgoldenrod; text-align:center"><b>Calcul salariu net 2019</b></h1>
+<p style="color:darkgrey; text-align:center">Vizualizati fluturasul de salariu cu toate contributiile la stat.</p>
+<br />
+
+<table class="table">
+    <thead style="color:aliceblue; font-size: 30px">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SalarBrut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SalarNet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cass)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BazaImpozabila)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Impozit)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody style="color:darkgoldenrod; font-size: 30px; font-weight: 900;">
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.SalarBrut)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.SalarNet)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Cas)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Cass)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.BazaImpozabila)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Impozit)
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
