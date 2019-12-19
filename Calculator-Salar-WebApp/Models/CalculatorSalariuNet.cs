@@ -10,6 +10,8 @@ namespace Calculator_Salar_WebApp.Models
     {
         public int Id { get; set; }
 
+        [Required]
+        [Range(1, uint.MaxValue, ErrorMessage = "Please enter valid integer number!")]
         [Display(Name = "Salar Brut")]
         public uint SalarBrut { get; set; }
 

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Calculator_Salar_WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
+using Calculator_Salar_WebApp.Repository;
 
 namespace Calculator_Salar_WebApp.Controllers
 {
@@ -14,34 +15,31 @@ namespace Calculator_Salar_WebApp.Controllers
         {
             _context = context;
         }
+
         public IActionResult Index()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult CalculNet([Bind("SalarBrut")] CalculatorSalariuNet _calculNet)
+        public IActionResult Index([Bind("SalarBrut")] CalculatorSalariuNet _calculNet)
         {
             if (ModelState.IsValid)
             {
-                var calculNet = new CalculatorSalariuNet()
-                {
-                    SalarBrut = _calculNet.SalarBrut,
-                    Cas = (uint)(0.25 * _calculNet.SalarBrut),
-                    Cass = (uint)(0.10 * _calculNet.SalarBrut),
-                    BazaImpozabila = _calculNet.SalarBrut - ((uint)(0.25 * _calculNet.SalarBrut)) - ((uint)(0.10 * _calculNet.SalarBrut)),
-                    Impozit = (uint)(0.10 * (_calculNet.SalarBrut - ((uint)(0.25 * _calculNet.SalarBrut)) - ((uint)(0.10 * _calculNet.SalarBrut)))),
-                    SalarNet = _calculNet.SalarBrut - ((uint)(0.25 * _calculNet.SalarBrut)) - ((uint)(0.10 * _calculNet.SalarBrut)) - ((uint)(0.10 * (_calculNet.SalarBrut - ((uint)(0.25 * _calculNet.SalarBrut)) - ((uint)(0.10 * _calculNet.SalarBrut)))))
-
-                };
-
+                CalculatorSalariuNet calculNet = Formulas.formulaForNetSalaryCalculation(_calculNet);
 
                 _context.CalculatorSalariuNet.Add(calculNet);
                 _context.SaveChanges();
-                return View(calculNet);
+                return RedirectToAction(nameof(CalculNet), "CalculatorSalariiNete", calculNet) ;
             }
 
-            return RedirectToAction(nameof(Index),"CalculatorSalariiNete");
+            return View(_calculNet);
+        }
+
+
+        public IActionResult CalculNet(CalculatorSalariuNet _calculNet)
+        {
+            return View(_calculNet);
         }
 
     }

@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width" />
     <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/content/site.css" />
-    <title>@ViewBag.Title</title>
+    <title>Salary Calculator</title>
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    @*<li><a asp-controller="Home" asp-action="Index" class="navbar-brand"><img src="~/images/download.png" /></a></li>*@
                     <li><a asp-controller="Home" asp-action="Index" class="navbar-brand">Home</a></li>
                     <li><a asp-controller="CalculatorSalariiNete" asp-action="Index" class="navbar-brand">Calculator salariu net</a></li>
                     <li><a asp-controller="CalculatorSalariiBrute" asp-action="Index" class="navbar-brand">Calculator salariu brut</a></li>
@@ -20,13 +19,13 @@
             </div>
         </div>
     </nav>
+
+
     <div class="container body-content">
-        @*enable Bootstrap*@
-        
-            @*all my items in a row*@
-            @RenderBody()
-        
+            @RenderBody()        
     </div>
+
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>
