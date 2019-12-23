@@ -1,6 +1,10 @@
-﻿using Calculator_Salar_WebApp.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Calculator_Salar_WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
-using Calculator_Salar_WebApp.Services;
+using Calculator_Salar_WebApp.Repository;
 
 namespace Calculator_Salar_WebApp.Controllers
 {
@@ -20,11 +24,11 @@ namespace Calculator_Salar_WebApp.Controllers
         [HttpPost]
         public IActionResult Index([Bind("SalarBrut")] CalculatorSalariuNet _calculNet)
         {
-            if (ModelState.IsValid && _calculNet != null)
+            if (ModelState.IsValid)
             {
-                var calculNet = Formulas.FormulaForNetSalaryAndEmployeeTaxesCalculation(_calculNet);
+                CalculatorSalariuNet calculNet = Formulas.formulaForNetSalaryCalculation(_calculNet);
 
-                _context.CalculatorSalariiNete.Add(calculNet);
+                _context.CalculatorSalariuNet.Add(calculNet);
                 _context.SaveChanges();
                 return RedirectToAction(nameof(CalculNet), "CalculatorSalariiNete", calculNet) ;
             }

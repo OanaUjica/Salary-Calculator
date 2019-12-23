@@ -38,7 +38,7 @@ namespace Calculator_Salar_WebApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CalculatorSalariiBrute");
+                    b.ToTable("CalculatorSalariuBrut");
                 });
 
             modelBuilder.Entity("Calculator_Salar_WebApp.Models.CalculatorSalariuNet", b =>
@@ -61,7 +61,7 @@ namespace Calculator_Salar_WebApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CalculatorSalariiNete");
+                    b.ToTable("CalculatorSalariuNet");
                 });
 #pragma warning restore 612, 618
         }
