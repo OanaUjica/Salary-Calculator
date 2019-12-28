@@ -22,7 +22,7 @@ namespace Calculator_Salar_WebApp.Controllers
         {
             if (ModelState.IsValid && _calculNet != null)
             {
-                var calculNet = Formulas.FormulaForNetSalaryAndEmployeeTaxesCalculation(_calculNet);
+                var calculNet = Formulas.ForNetSalaryAndEmployeeTaxesCalculationFromGrossSalary(_calculNet);
 
                 _context.CalculatorSalariiNete.Add(calculNet);
                 _context.SaveChanges();

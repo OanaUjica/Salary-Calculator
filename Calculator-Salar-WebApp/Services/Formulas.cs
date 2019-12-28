@@ -1,12 +1,17 @@
 ﻿using Calculator_Salar_WebApp.Models;
-
+using System;
 
 namespace Calculator_Salar_WebApp.Services
 {
     public class Formulas
     {
+        private Formulas()
+        {
+
+        }
+
         // Formula for net salary and the employee taxes (CAS, CASS, taxable base, tax)
-        public static CalculatorSalariuNet FormulaForNetSalaryAndEmployeeTaxesCalculation(CalculatorSalariuNet _salariuBrut)
+        public static CalculatorSalariuNet ForNetSalaryAndEmployeeTaxesCalculationFromGrossSalary(CalculatorSalariuNet _salariuBrut)
         {
             var calculNet = new CalculatorSalariuNet()
             {
