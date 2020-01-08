@@ -9,8 +9,8 @@ namespace Calculator_Salar_WebApp.Models
             : base(options)
         {
         }
-        public DbSet<CalculatorSalariuBrut> CalculatorSalariiBrute { get; set; }
-        public DbSet<CalculatorSalariuNet> CalculatorSalariiNete { get; set; }
+        public DbSet<NetSalaryCalculator> NetSalariesCalculator { get; set; }
+        public DbSet<GrossSalaryCalculator> GrossSalariesCalculator { get; set; }
 
     }
 }

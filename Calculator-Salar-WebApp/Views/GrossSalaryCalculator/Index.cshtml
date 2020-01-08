@@ -1,4 +1,4 @@
-﻿@model Calculator_Salar_WebApp.Models.CalculatorSalariuBrut
+﻿@model GrossSalaryCalculator
 
 @{
     ViewData["Title"] = "Calculator salariu brut";
@@ -11,8 +11,8 @@
     <br />
     <form style="color:darkgoldenrod; text-align:center" class="form-inline" action="/action_page.php">
         <div class="form-group">
-            <input asp-for="SalarBrut" class="form-control" placeholder="Introduceti salariul net" />
-            <span asp-validation-for="SalarBrut" class="text-danger"></span>
+            <input asp-for="NetSalary" class="form-control" placeholder="Introduceti salariul net" />
+            <span asp-validation-for="NetSalary" class="text-danger"></span>
         </div>
         <button type="submit" class="btn btn-warning">Calculeaza</button>
     </form>

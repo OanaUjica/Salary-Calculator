@@ -13,8 +13,8 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-controller="Home" asp-action="Index" class="navbar-brand">Home</a></li>
-                    <li><a asp-controller="CalculatorSalariiNete" asp-action="Index" class="navbar-brand">Calculator salariu net</a></li>
-                    <li><a asp-controller="CalculatorSalariiBrute" asp-action="Index" class="navbar-brand">Calculator salariu brut</a></li>
+                    <li><a asp-controller="NetSalaryCalculator" asp-action="Index" class="navbar-brand">Calculator salariu net</a></li>
+                    @*<li><a asp-controller="GrossSalaryCalculator" asp-action="Index" class="navbar-brand">Calculator salariu brut</a></li>*@
                 </ul>
             </div>
         </div>
@@ -22,7 +22,7 @@
 
 
     <div class="container body-content">
-            @RenderBody()        
+        @RenderBody()
     </div>
 
 

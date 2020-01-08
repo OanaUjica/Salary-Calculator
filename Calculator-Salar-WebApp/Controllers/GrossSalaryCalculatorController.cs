@@ -2,7 +2,7 @@
 
 namespace Calculator_Salar_WebApp.Controllers
 {
-    public class CalculatorSalariiBruteController : Controller
+    public class GrossSalaryCalculatorController : Controller
     {
         public IActionResult Index()
         {
