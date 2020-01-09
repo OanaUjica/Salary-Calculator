@@ -1,56 +1,58 @@
 ﻿@model NetSalaryCalculator
 
+<div class="container" style="padding-top:80px;">
+    <h1 style="color:darkgoldenrod; text-align:center"><b>Calcul salariu net 2020</b></h1>
+    <p style="color:darkgrey; text-align:center">Vizualizati fluturasul de salariu cu toate contributiile la stat.</p>
+    <br />
 
-<h1 style="color:darkgoldenrod; text-align:center"><b>Calcul salariu net 2020</b></h1>
-<p style="color:darkgrey; text-align:center">Vizualizati fluturasul de salariu cu toate contributiile la stat.</p>
-<br />
+    <table class="table">
+        <thead style="color:aliceblue; font-size: 30px">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.GrossSalary)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NetSalary)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cas)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cass)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TaxableBase)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tax)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody style="color:darkgoldenrod; font-size: 30px; font-weight: 900;">
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.GrossSalary)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.NetSalary)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Cas)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Cass)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.TaxableBase)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Tax)
+                </td>
+            </tr>
 
-<table class="table">
-    <thead style="color:aliceblue; font-size: 30px">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.GrossSalary)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NetSalary)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cas)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cass)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TaxableBase)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Tax)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody style="color:darkgoldenrod; font-size: 30px; font-weight: 900;">
-        <tr>
-            <td>
-                @Html.DisplayFor(model => model.GrossSalary)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.NetSalary)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.Cas)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.Cass)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.TaxableBase)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.Tax)
-            </td>
-        </tr>
+        </tbody>
+    </table>
+</div>
 
-    </tbody>
-</table>
 
